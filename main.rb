@@ -73,7 +73,7 @@ class App
 
   def create_item
     puts 'Enter the item label:'
-    title = gets.chomp
+    label = gets.chomp
     puts 'Enter the item source:'
     source = gets.chomp
     puts 'Enter the item published year (YYYY):'
