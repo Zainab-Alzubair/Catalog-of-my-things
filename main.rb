@@ -68,7 +68,7 @@ class App
     puts '13. Add a music album'
     puts '14. Add a movie'
     puts '15. Add a game'
-    puts '00.  Exit'
+    puts '00. Exit'
   end
 
   def create_item
