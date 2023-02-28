@@ -9,6 +9,14 @@ class book < Item
     @pages = pages
     @cover_state = cover_state
   end 
+
+  def can_be_archived?
+    if @cover_state == "bad"
+      return true
+    else
+      return super
+    end
+  end
 end
 
     
