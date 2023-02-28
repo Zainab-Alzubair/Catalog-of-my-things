@@ -77,8 +77,8 @@ class App
     puts 'Enter the item source:'
     source = gets.chomp
     puts 'Enter the item published year (YYYY):'
-    published_year = gets.chomp.to_i
-    item = Item.new(label, source, Time.new(published_year))
+    published_date = gets.chomp.to_i
+    item = Item.new(label, source, Time.new(published_date))
     @items << item
     puts 'Item created successfully!'
   end
