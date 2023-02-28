@@ -10,14 +10,39 @@ class App
       show_menu
       choice = gets.chomp.to_i
       case choice
-      when 1
-        create_item
-      when 2
+      when 1  
+        Create_item
+      when 2 
         archive_item
       when 3
         list_items
       when 4
-        exit
+        list_all_books
+      when 5
+        list_albums
+      when 6  
+        list_all_movies
+      when 7
+        list of games
+      when 8  
+        list_all_genres
+      when 9  
+        list_all_labels
+      when 10
+        list_authors
+      when 11 
+        list_sources
+      when 12 
+        add_book
+      when 13 
+        add_music_album
+      when 14 
+        add_movie
+      when 15 
+        add_game
+      when 00
+        puts 'Goodbye'
+        break
       else
         puts 'Invalid choice, please try again'
       end
@@ -42,8 +67,8 @@ class App
     puts '12. Add a book'
     puts '13. Add a music album'
     puts '14. Add a movie'
-    puts '14. Add a game'
-    puts '4.  Exit'
+    puts '15. Add a game'
+    puts '00.  Exit'
   end
 
   def create_item
