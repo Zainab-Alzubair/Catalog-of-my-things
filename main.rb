@@ -72,15 +72,13 @@ class App
   end
 
   def create_item
-    puts 'Enter the item title:'
+    puts 'Enter the item label:'
     title = gets.chomp
-    puts 'Enter the item description:'
-    description = gets.chomp
+    puts 'Enter the item source:'
+    source = gets.chomp
     puts 'Enter the item published year (YYYY):'
     published_year = gets.chomp.to_i
-    puts 'Enter the item category:'
-    category = gets.chomp
-    item = Item.new(title, description, Time.new(published_year), category)
+    item = Item.new(label, source, Time.new(published_year))
     @items << item
     puts 'Item created successfully!'
   end
