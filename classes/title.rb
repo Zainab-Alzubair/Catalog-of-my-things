@@ -1,7 +1,6 @@
 require 'date'
 require_relative './years'
 
-
 class Item
   attr_accessor :archived, :publish_date
   attr_reader :label, :author, :genre, :source
