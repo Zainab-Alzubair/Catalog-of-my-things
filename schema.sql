@@ -29,3 +29,18 @@ CREATE TABLE item(
   FOREIGN KEY (label_id) REFERENCES label(id)
 );
 
+ -- Create a Genre class table
+ CREATE TABLE genre(
+  id SERIAL NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  PRIMARY KEY(id)
+ );
+
+ -- Create a Music Album class table
+CREATE TABLE music_album(
+  id SERIAL PRIMARY KEY,
+  on_spotify BOOLEAN,
+  publish_date DATE,
+  archived BOOLEAN,
+  genre_name VARCHAR(100) NOT NULL REFERENCES genre(name)
+);
