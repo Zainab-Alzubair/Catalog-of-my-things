@@ -1,13 +1,14 @@
 require 'date'
+require_relative './years'
 
 class Item
-  attr_accessor :archive, :publish_date
-  attr_reader :label, :author, :genre, :source
+  attr_accessor :archived, :publish_date, :author
+  attr_reader :label, :genre, :source
 
-  def initialize(publish_date)
+  def initialize(publish_date, archived, _id)
     @id = Random.rand(1..1000)
     @publish_date = publish_date
-    @archive = false
+    @archived = archived
   end
 
   def can_be_archived?
@@ -15,6 +16,6 @@ class Item
   end
 
   def move_to_archive
-    @archive = true if can_be_archived?
+    @archived = true if can_be_archived?
   end
 end
