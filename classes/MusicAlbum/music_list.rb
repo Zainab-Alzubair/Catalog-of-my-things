@@ -34,12 +34,10 @@ class MusicList
     archived = true
     case on_spotify
     when 'yes'
-      album = MusicAlbum.new(on_spotify, publish_date, archived)
+      @album = MusicAlbum.new(on_spotify, publish_date, archived)
     when 'no'
-      album = MusicAlbum.new(on_spotify, publish_date, archived = false)
+      @album = MusicAlbum.new(on_spotify, publish_date, archived = false)
     end
-
-    # @musics << MusicAlbum.new(on_spotify, publish_date, archived).to_json
     genre = Genre.new(genre_name)
     music_album = MusicAlbum.new(on_spotify, publish_date, archived)
     music_album.genre = genre_name
