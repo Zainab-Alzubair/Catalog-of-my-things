@@ -1,4 +1,4 @@
-require_relative 'classes/title'
+require_relative 'title'
 
 class Book < Item
   attr_accessor :title, :author, :publish_date, :cover_state
