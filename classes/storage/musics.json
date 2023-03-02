@@ -1,0 +1,16 @@
+[
+  {
+    "id": 724,
+    "on_spotify": "yes",
+    "publish_date": "2020-02-02",
+    "archived": true,
+    "genre_name": "Test "
+  },
+  {
+    "id": 610,
+    "on_spotify": "no",
+    "publish_date": "2022-02-02",
+    "archived": false,
+    "genre_name": "pop"
+  }
+]
