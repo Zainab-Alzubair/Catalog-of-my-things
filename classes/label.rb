@@ -13,7 +13,7 @@ class Label
     @items << item
     item.label = self
   end
-  
+
   def save
     File.open('labels.json', 'a') do |file|
       file.puts JSON.generate(to_h)

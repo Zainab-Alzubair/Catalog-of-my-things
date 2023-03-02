@@ -17,7 +17,6 @@ class Book < Item
     super
   end
 
-
   def save
     File.open('books.json', 'a') do |file|
       file.puts JSON.generate(to_h)
