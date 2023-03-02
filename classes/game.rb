@@ -13,7 +13,7 @@ class Game < Item
   end
 
   def can_be_archived?
-    return true if super == true && years_vs_today(@last_played_at) > 2
+    return true if super == true && years_vs_today(last_played_at) > 2
   end
 
   def to_json(*_args)
