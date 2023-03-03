@@ -55,7 +55,7 @@ class MusicList
       puts yellow 'No musics found. Please add some music to the list.'
     else
       @musics.each_with_index do |music, index|
-        puts "#{yellow index}) 📀 publish_date: #{blue music['publish_date']}, On Spotify: #{blue music['on_spotify']}, Archived: #{blue music['archived']}, Genre_name: #{blue music['genre_name']}"
+        puts "#{yellow index}) 📀 id : #{blue music['id']}, publish_date: #{blue music['publish_date']}, On Spotify: #{blue music['on_spotify']}, Archived: #{blue music['archived']}, Genre_name: #{blue music['genre_name']}"
       end
     end
     nil
