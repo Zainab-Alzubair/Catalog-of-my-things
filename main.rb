@@ -1,8 +1,10 @@
 require_relative './app'
 
 def run
+  puts "\n"
   print "⭐️ Welcome to the Catalog of my Things! ⭐️ \n\n"
   loop do
+    puts "\n"
     puts "🔸Please choose an option by entering a number: \n
     1 - List all books
     2 - List all music albums
@@ -43,7 +45,7 @@ def list_all_items(option)
 
   case option
   when 1
-    list_all_books
+    app.books.list_all_books
   when 2
     app.musics.list_all_music_albums
   when 3
@@ -51,7 +53,7 @@ def list_all_items(option)
   when 4
     app.musics.list_all_genres
   when 5
-    list_all_labels
+    app.list_labels
   when 6
     app.list_authors
   end
@@ -63,7 +65,7 @@ def add_items(option)
 
   case option
   when 7
-    create_book
+    app.books.add_book
   when 8
     app.musics.add_music_album
   when 9

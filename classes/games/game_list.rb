@@ -1,9 +1,9 @@
 require_relative './game'
-require_relative './author'
-require_relative './author_list'
-require_relative './years'
+require_relative '../author/author'
+require_relative '../author/author_list'
+require_relative '../years'
 require 'json'
-require_relative './input'
+require_relative '../input'
 
 class GameList
   include Input

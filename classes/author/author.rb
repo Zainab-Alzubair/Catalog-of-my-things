@@ -1,4 +1,4 @@
-require_relative './title'
+require_relative '../title'
 
 class Author
   attr_accessor :first_name, :last_name

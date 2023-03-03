@@ -1,5 +1,5 @@
-require_relative './title'
-require_relative './years'
+require_relative '../title'
+require_relative '../years'
 
 class Game < Item
   include Years
