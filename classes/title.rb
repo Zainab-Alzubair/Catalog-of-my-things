@@ -3,7 +3,7 @@ require_relative './years'
 
 class Item
   attr_accessor :archived, :publish_date, :author, :lable
-  attr_reader :lable, :genre, :source
+  attr_reader :genre, :source
 
   def initialize(publish_date, archived, _id)
     @id = Random.rand(1..1000)
