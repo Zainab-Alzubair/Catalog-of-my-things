@@ -4,7 +4,6 @@ class Book < Item
   attr_accessor :title, :author, :publish_date, :cover_state
 
   def initialize(title, author, publish_date, cover_state)
-    super(publish_date)
     @title = title
     @author = author
     @publish_date = publish_date
@@ -27,7 +26,7 @@ class Book < Item
     {
       title: @title,
       author: @author,
-      pages: @pages,
+      publish_date: @publish_date,
       cover_state: @cover_state
     }
   end
@@ -37,7 +36,7 @@ class Book < Item
     File.open('books.json', 'r') do |file|
       file.each_line do |line|
         book_data = JSON.parse(line, symbolize_names: true)
-        books << new(book_data[:title], book_data[:author], book_data[:pages], book_data[:cover_state])
+        books << new(book_data[:title], book_data[:author], book_data[:publish_date], book_data[:cover_state])
       end
     end
     books
