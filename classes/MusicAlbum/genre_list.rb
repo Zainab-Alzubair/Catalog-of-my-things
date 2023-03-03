@@ -1,6 +1,8 @@
 require 'json'
+require_relative './color'
 
 module GnresList
+  include ColorTerminal
   def add_genre(genre)
     File.new('./classes/storage/genres.json', 'w+') unless File.exist?('./classes/storage/genres.json')
     if File.empty?('./classes/storage/genres.json')
@@ -21,13 +23,13 @@ module GnresList
 
     if File.empty?('./classes/storage/genres.json')
       puts "\n"
-      puts 'The genres list is empty, please add some items with genres...'
+      puts yellow 'The genres list is empty, please add some items with genres...'
     else
       data = File.read('./classes/storage/genres.json').split
       genres = JSON.parse(data.join)
       puts "genre's list:\n\n"
       genres.each_with_index do |genre, index|
-        print "#{index}) id: #{genre['id']}, name: #{genre['name']} \n\n"
+        print "#{yellow index}) id: #{blue genre['id']}, name: #{blue genre['name']} \n\n"
       end
     end
   end
