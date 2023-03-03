@@ -1,4 +1,5 @@
-require_relative '../classes/author'
+require 'rspec'
+require_relative '../classes/author/author'
 require_relative '../classes/title'
 
 describe Author do

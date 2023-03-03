@@ -2,7 +2,7 @@ require 'date'
 require_relative './years'
 
 class Item
-  attr_accessor :archived, :publish_date, :author, :lable
+  attr_accessor :archived, :publish_date, :author, :label
   attr_reader :genre, :source
 
   def initialize(publish_date, archived, _id)

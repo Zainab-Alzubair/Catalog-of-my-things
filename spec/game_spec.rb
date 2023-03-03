@@ -1,5 +1,6 @@
 require 'rspec'
-require_relative '../classes/game'
+require_relative '../classes/title'
+require_relative '../classes/games/game'
 
 describe Game do
   game = Game.new(true, Time.new(2010, 9, 1), Time.new(1990, 12, 29), true)
