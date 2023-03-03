@@ -45,11 +45,11 @@ def list_all_items(option)
   when 1
     list_all_books
   when 2
-    list_all_music_albums
+    app.musics.list_all_music_albums
   when 3
     app.games.list_all_games
   when 4
-    list_all_genres
+    app.musics.list_all_genres
   when 5
     list_all_labels
   when 6
@@ -65,7 +65,7 @@ def add_items(option)
   when 7
     create_book
   when 8
-    add_music_album
+    app.musics.add_music_album
   when 9
     app.games.add_game
   end
